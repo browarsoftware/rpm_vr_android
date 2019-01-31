@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RPM cardboard controller</string>
+    <string name="app_version">0.1</string>
+    <string name="tVersion">v&#160;</string>
+    <string name="bRestore">Restore</string>
+    <string name="bApplay">Applay</string>
+    <string name="bApplayAndStarts">Applay &amp; start</string>
+</resources>

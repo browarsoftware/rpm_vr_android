@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- monkey source https://pixabay.com/pl/nosacz-tr%C4%85ba-borneo-d%C5%82ugo-nosacz-212825/ -->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NetworkSettings"
+    android:background="@color/color_green">
+
+    <LinearLayout
+        android:layout_margin="@dimen/alignment_marker_thickness"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TableLayout
+            android:id="@+id/TLTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1,2"
+            android:background="#accb52">
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/TWTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="#fff"
+            android:gravity="left"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/TWVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tVersion"
+            android:textColor="#fff"
+            android:gravity="right"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/TWVersionNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_version"
+            android:gravity="right"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        </TableRow>
+        </TableLayout>
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TableLayout
+            android:id="@+id/TLForms"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1,2">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TWRobotIP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Robot IP"
+                    android:textColor="#fff"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="66dp" />
+
+                <EditText
+                    android:id="@+id/EDRobotIP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TWStreamURL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MJPEG stream URL"
+                    android:textColor="#fff" />
+
+                <EditText
+                    android:id="@+id/EDStreamURL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TVHeadY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Turning angle"
+                    android:textColor="#fff" />
+
+                <TableLayout>
+
+                    <TableRow>
+
+                        <SeekBar
+                            android:id="@+id/SBHeadY"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".80"
+                            android:max="60"
+                            android:progress="20" />
+
+                        <EditText
+                            android:id="@+id/EDSBHeadY"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".20"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:inputType="textPersonName"
+                            android:textColor="#fff" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TVHeadX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Motion angle"
+                    android:textColor="#fff" />
+
+                <TableLayout>
+
+                    <TableRow>
+
+                        <SeekBar
+                            android:id="@+id/SBHeadX"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".80"
+                            android:max="60"
+                            android:progress="20" />
+
+                        <EditText
+                            android:id="@+id/EDSBHeadX"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".20"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:inputType="textPersonName"
+                            android:textColor="#fff" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/TLButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_height="20dp"
+                android:layout_width="0px"/>
+
+            <TableRow>
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:layout_weight="0.02"/>
+                <Button
+                    android:id="@+id/BRestore"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:text="@string/bRestore"
+                    android:layout_weight="0.30"/>
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:layout_weight="0.02"/>
+                <Button
+                    android:id="@+id/BApplySettings"
+                    android:layout_width="0px"
+                    android:layout_height="@dimen/transition_bottom_bar_height"
+                    android:layout_weight="0.30"
+                    android:text="@string/bApplay"/>
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:layout_weight="0.02"/>
+                <Button
+                    android:id="@+id/BApplayAndStart"
+                    android:layout_height="@dimen/transition_bottom_bar_height"
+                    android:text="@string/bApplayAndStarts"
+                    android:layout_width="0px"
+                    android:layout_weight="0.30"/>
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:layout_weight="0.02"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
